@@ -1,0 +1,24 @@
+{
+  "name": "installation-setup-docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook build",
+    "start": "gitbook serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/npm/installation-setup-docs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/npm/installation-setup-docs/issues"
+  },
+  "homepage": "https://github.com/npm/installation-setup-docs#readme",
+  "devDependencies": {
+    "gitbook-cli": "^2.1.3"
+  }
+}
