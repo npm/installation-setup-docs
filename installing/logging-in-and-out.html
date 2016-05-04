@@ -55,7 +55,7 @@
         data-chapter-title="Logging in and out"
         data-filepath="installing/logging-in-and-out.md"
         data-basepath=".."
-        data-revision="Wed May 04 2016 15:25:51 GMT+0000 (UTC)"
+        data-revision="Wed May 04 2016 15:31:52 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -282,7 +282,10 @@ you can create it 2 ways:</p>
 <p>Once you have created a user and logged in, you can use <code>npm config ls</code> to ensure that the
 credentials are stored on your client. You can also check that your user has been added to
 the registry by going to <a href="https://npmjs.com/~" target="_blank">https://npmjs.com/~</a>username.</p>
-<h2 id="logging-out">Logging Out</h2>
+<h3 id="npm-whoami">npm whoami</h3>
+<p>To see what username you are logged in as, you can enter:</p>
+<pre><code>npm whoami [--registry &lt;registry&gt;]
+</code></pre><h2 id="logging-out">Logging Out</h2>
 <p>To log out, use the <code>npm logout</code> command:</p>
 <pre><code>npm logout [--registry=&lt;url&gt;] [--scope=&lt;@scope&gt;]
 </code></pre><p>When logged into a registry that supports token-based authentication, this
