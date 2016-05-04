@@ -13,6 +13,12 @@ Once you have created a user and logged in, you can use `npm config ls` to ensur
 credentials are stored on your client. You can also check that your user has been added to
 the registry by going to [https://npmjs.com/~](https://npmjs.com/~)username.
 
+### npm whoami
+
+To see what username you are logged in as, you can enter:
+
+    npm whoami [--registry <registry>]
+
 ## Logging Out
 
 To log out, use the `npm logout` command:
