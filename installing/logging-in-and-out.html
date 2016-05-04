@@ -53,9 +53,9 @@
     <div class="book"
         data-level="1.4"
         data-chapter-title="Logging in and out"
-        data-filepath="customizing/logging-in-and-out.md"
+        data-filepath="installing/logging-in-and-out.md"
         data-basepath=".."
-        data-revision="Tue May 03 2016 16:55:50 GMT+0000 (UTC)"
+        data-revision="Wed May 04 2016 15:18:14 GMT+0000 (UTC)"
         data-innerlanguage="">
     
 
@@ -166,10 +166,10 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="customizing/logging-in-and-out.html">
+        <li class="chapter active" data-level="1.4" data-path="installing/logging-in-and-out.html">
             
                 
-                    <a href="../customizing/logging-in-and-out.html">
+                    <a href="../installing/logging-in-and-out.html">
                 
                         <i class="fa fa-check"></i>
                         
@@ -271,6 +271,51 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="logging-in-and-out">Logging in and out</h1>
+<h2 id="creating-a-user-and-logging-in">Creating a user and Logging In</h2>
+<p>To publish a package, you must have a user on the npm registry. If you don&apos;t have one,
+you can create it 2 ways:</p>
+<ul>
+<li>On the npm website</li>
+<li>Using <code>npm adduser</code></li>
+</ul>
+<p>Note: If you created one on the site, use <code>npm login</code> to store the credentials on the client.</p>
+<p>Once you have created a user and logged in, you can use <code>npm config ls</code> to ensure that the
+credentials are stored on your client. You can also check that your user has been added to
+the registry by going to <a href="https://npmjs.com/~" target="_blank">https://npmjs.com/~</a>username.</p>
+<h2 id="logging-out">Logging Out</h2>
+<p>To log out, use the <code>npm logout</code> command:</p>
+<pre><code>npm logout [--registry=&lt;url&gt;] [--scope=&lt;@scope&gt;]
+</code></pre><p>When logged into a registry that supports token-based authentication, this
+command will tell the server to end this token&apos;s session. This will invalidate
+the token everywhere you&apos;re using it, not just for the current environment.</p>
+<p>When logged into a legacy registry that uses username and password authentication,
+this will clear the credentials in your user configuration. In this case, it will
+ <em>only</em> affect the current environment.</p>
+<p>If <code>--scope</code> is provided, this will find the credentials for the registry
+connected to that scope, if set.</p>
+<h3 id="configuration">Configuration</h3>
+<p>You can configure the <code>logout</code> command 2 ways:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Description</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>registry</code></td>
+<td>The base URL of the npm package registry. If <code>scope</code> is also specified,it takes precedence.</td>
+<td><code>https://registry.npmjs.org/</code></td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>If specified, you will be logged out of the specified scope.</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
 
                     
                     </section>
